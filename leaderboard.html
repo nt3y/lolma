@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard | LOLMA</title>
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://raw.communitydragon.org" />
+    <link rel="stylesheet" href="./styles.css?v=purple-5" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <main>
+        <header class="topbar">
+          <a class="mobile-brand" href="./index.html">
+            <span><img src="./assets/lolma-logo.png" alt="LOLMA logo" /></span>
+            <strong>LOLMA</strong>
+          </a>
+          <nav>
+            <a href="./index.html"><i data-lucide="home"></i>Overview</a>
+            <a href="./leaderboard.html" class="is-active"><i data-lucide="chart-no-axes-column-increasing"></i>Leaderboard</a>
+            <a href="./blog.html">News</a>
+            <a href="./tournaments.html">Tournaments</a>
+            <a href="./index.html#lfg">Looking for Game</a>
+            <a href="./courses.html">Courses</a>
+          </nav>
+          <div class="auth-actions">
+            <a class="ghost-button discord-top" href="https://discord.com" target="_blank" rel="noreferrer"><svg class="discord-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.32 4.37A19.79 19.79 0 0 0 15.36 2.84a.07.07 0 0 0-.08.04c-.21.37-.45.86-.62 1.24a18.27 18.27 0 0 0-5.48 0 12.64 12.64 0 0 0-.63-1.24.08.08 0 0 0-.08-.04A19.74 19.74 0 0 0 3.52 4.37a.07.07 0 0 0-.03.03C.36 9.08-.5 13.65-.08 18.17a.08.08 0 0 0 .03.05 19.9 19.9 0 0 0 6.08 3.07.08.08 0 0 0 .08-.03c.47-.64.89-1.31 1.25-2.01a.08.08 0 0 0-.04-.11 13.08 13.08 0 0 1-1.9-.91.08.08 0 0 1-.01-.13c.13-.1.26-.2.38-.3a.07.07 0 0 1 .08-.01c4 1.83 8.33 1.83 12.28 0a.07.07 0 0 1 .08.01c.13.1.25.2.39.3a.08.08 0 0 1-.01.13 12.5 12.5 0 0 1-1.9.9.08.08 0 0 0-.04.11c.37.7.78 1.37 1.25 2.01a.08.08 0 0 0 .08.03 19.84 19.84 0 0 0 6.09-3.07.08.08 0 0 0 .03-.05c.5-5.23-.84-9.77-3.78-13.77a.06.06 0 0 0-.03-.03ZM8.02 15.42c-1.2 0-2.2-1.1-2.2-2.46s.97-2.46 2.2-2.46c1.24 0 2.22 1.11 2.2 2.46 0 1.36-.97 2.46-2.2 2.46Zm7.97 0c-1.2 0-2.2-1.1-2.2-2.46s.97-2.46 2.2-2.46c1.24 0 2.22 1.11 2.2 2.46 0 1.36-.96 2.46-2.2 2.46Z"/></svg>Discord</a>
+            <a class="ghost-button" href="./login.html"><i data-lucide="log-in"></i>Login</a>
+            <a class="primary-button" href="./register.html"><i data-lucide="user-plus"></i>Register</a>
+          </div>
+        </header>
+
+        <div class="page-canvas leaderboard-page">
+          <div class="leaderboard-panel" id="leaderboard">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Season 2026</p>
+                <h2>Morocco Leaderboard</h2>
+              </div>
+              <div class="segmented">
+                <button class="is-selected">Rank</button>
+                <button>Win Rate</button>
+                <button>KDA</button>
+              </div>
+            </div>
+
+            <div class="leader-cards" id="leaderCards"></div>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Place</th>
+                    <th>Player</th>
+                    <th>Flag</th>
+                    <th>Rank</th>
+                    <th>Most Played</th>
+                    <th>Record</th>
+                    <th>Winrate</th>
+                    <th>KDA</th>
+                  </tr>
+                </thead>
+                <tbody id="leaderRows"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <footer class="site-footer">
+          <div class="site-footer-inner">
+            <div class="footer-brand"><strong>LOLMA</strong><p>About us: the Moroccan League of Legends community hub for players, tournaments, coaches, and news.</p></div>
+            <nav class="footer-links" aria-label="Footer navigation"><a href="./index.html">Overview</a><a href="./leaderboard.html">Leaderboard</a><a href="./blog.html">News</a><a href="./tournaments.html">Tournaments</a><a href="./index.html#lfg">Looking for Game</a><a href="./courses.html">Coaches</a><a href="./login.html">Login</a><a href="./register.html">Register</a></nav>
+            <a class="primary-button footer-discord" href="https://discord.com" target="_blank" rel="noreferrer"><svg class="discord-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.32 4.37A19.79 19.79 0 0 0 15.36 2.84a.07.07 0 0 0-.08.04c-.21.37-.45.86-.62 1.24a18.27 18.27 0 0 0-5.48 0 12.64 12.64 0 0 0-.63-1.24.08.08 0 0 0-.08-.04A19.74 19.74 0 0 0 3.52 4.37a.07.07 0 0 0-.03.03C.36 9.08-.5 13.65-.08 18.17a.08.08 0 0 0 .03.05 19.9 19.9 0 0 0 6.08 3.07.08.08 0 0 0 .08-.03c.47-.64.89-1.31 1.25-2.01a.08.08 0 0 0-.04-.11 13.08 13.08 0 0 1-1.9-.91.08.08 0 0 1-.01-.13c.13-.1.26-.2.38-.3a.07.07 0 0 1 .08-.01c4 1.83 8.33 1.83 12.28 0a.07.07 0 0 1 .08.01c.13.1.25.2.39.3a.08.08 0 0 1-.01.13 12.5 12.5 0 0 1-1.9.9.08.08 0 0 0-.04.11c.37.7.78 1.37 1.25 2.01a.08.08 0 0 0 .08.03 19.84 19.84 0 0 0 6.09-3.07.08.08 0 0 0 .03-.05c.5-5.23-.84-9.77-3.78-13.77a.06.06 0 0 0-.03-.03ZM8.02 15.42c-1.2 0-2.2-1.1-2.2-2.46s.97-2.46 2.2-2.46c1.24 0 2.22 1.11 2.2 2.46 0 1.36-.97 2.46-2.2 2.46Zm7.97 0c-1.2 0-2.2-1.1-2.2-2.46s.97-2.46 2.2-2.46c1.24 0 2.22 1.11 2.2 2.46 0 1.36-.96 2.46-2.2 2.46Z"/></svg>Discord Join Us</a>
+            <div class="footer-bottom"><span>Made By Natty for Love</span><span>LOLMA 2026/2027</span></div>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="./app.js?v=purple-5"></script>
+  </body>
+</html>
